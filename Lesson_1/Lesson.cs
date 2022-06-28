@@ -18,79 +18,19 @@ namespace Lesson_1
     }
     class Car : Transport // реализация 
     {
-        protected string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        protected int Dors
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        protected int Wheels
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        protected int Speed
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        protected int countPassenger
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        protected Driver driver
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        string Transport.Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        int Transport.Dors { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        int Transport.Wheels { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        int Transport.Speed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        int Transport.countPassenger { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        Driver Transport.driver { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         protected void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        void Transport.Move()
         {
             throw new NotImplementedException();
         }
@@ -132,7 +72,7 @@ namespace Lesson_1
             }
         }
     }
-    class Emploers // ассоциация
+    class Employees // ассоциация
     {
         List<Driver> cars = new List<Driver>();
         public void addEmloers(Driver car)
@@ -141,6 +81,6 @@ namespace Lesson_1
     class CompanyTaxi // агрегация
     {
         Parcing park = new Parcing();
-        Emploers emploers = new Emploers();
+        Employees emploers = new Employees();
     }
 }
