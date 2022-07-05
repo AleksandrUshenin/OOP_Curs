@@ -23,7 +23,7 @@ namespace Lesson_2
             for (int i = 0; i < tests.Length; i++)
             {
                 var res = tests[i];
-                PrintResult((bool)res);
+                PrintResult(res);
             }
         }
         void PrintResult(bool resulr)
