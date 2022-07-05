@@ -34,7 +34,7 @@ namespace Lesson_2
         public TypeUser Type { get; private set; }
 
         /// <summary>
-        /// конструктор без параметра 
+        /// Инициализация нового банковского счёта
         /// </summary>
         public Account()
         {
