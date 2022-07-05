@@ -19,7 +19,7 @@ namespace Lesson_2
         }
         public void RUN()
         {
-            var tests = new object[] { Test1(), Test2(), Test3(), Test4(), Test5() };
+            var tests = new bool[] { Test1(), Test2(), Test3(), Test4(), Test5() };
             for (int i = 0; i < tests.Length; i++)
             {
                 var res = tests[i];
