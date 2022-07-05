@@ -78,7 +78,7 @@ namespace Lesson_2
         /// генерация id
         /// </summary>
         /// <returns></returns>
-        int GenId()
+        private static int GenId()
         {
             return ++SID;
         }
