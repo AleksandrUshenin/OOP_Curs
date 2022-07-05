@@ -28,7 +28,7 @@ namespace Lesson_2
         /// <summary>
         /// статическая переменная для генерации id
         /// </summary>
-        static int SID;
+        private static int SID;
         public int ID { get; private set; }
         public decimal Balance { get; private set; }
         public TypeUser Type { get; private set; }
