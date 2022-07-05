@@ -79,11 +79,7 @@ namespace Lesson_2
         }
         bool Test5()
         {
-            if (accounts[3].Balance == 800 && accounts[3].Type == TypeUser.ProUser && accounts[3].ID == 4)
-            {
-                return true;
-            }
-            return false;
+            return accounts[3].Balance == 800 && accounts[3].Type == TypeUser.ProUser && accounts[3].ID == 4;
         }
     }
 }
