@@ -53,7 +53,7 @@ namespace BuilderLibrary
         }
         public override string ToString()
         {
-            return $"Id:{Id} Heght:{Heght} Flors:{Flors} Apartments:{Apartments} Entrances:{Entrances}  {Streeet}";
+            return $"Id:{Id} Heght:{Heght} Flors:{Flors} Apartments:{Apartments} Entrances:{Entrances}  Streeet:{Streeet}";
         }
     }
 }
