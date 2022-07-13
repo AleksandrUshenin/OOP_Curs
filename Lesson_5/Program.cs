@@ -6,6 +6,10 @@ namespace Lesson_5
     {
         static void Main(string[] args)
         {
+            Test test = new Test();
+            Console.WriteLine(test.GetRerult());
+
+            Console.ReadKey();
         }
     }
 }
