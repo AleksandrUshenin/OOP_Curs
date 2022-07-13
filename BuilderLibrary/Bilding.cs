@@ -34,7 +34,7 @@ namespace BuilderLibrary
 
         public double GetHight_Flor()
         {
-            return (double)(Heght / Flors);
+            return ((double)Heght / Flors);
         }
         public int Get_apartments_in_flor()
         {
