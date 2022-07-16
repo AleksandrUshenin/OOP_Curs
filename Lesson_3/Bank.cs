@@ -27,6 +27,8 @@ namespace Lesson_3
         {
             listAcc = new List<Account>();
         }
+
+
         /// <summary>
         /// вход в аккаунт
         /// </summary>

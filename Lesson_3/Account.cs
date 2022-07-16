@@ -33,44 +33,30 @@ namespace Lesson_3
         public string SecondName { get; private set; }
         public bool Messege { get; private set; }
 
-        public Account(string name1, string name2, string pass)
+
+        public Account(string FirstName, string SecondName, string pass)
         {
             ID = GenId();
             Password = pass;
-            FirstName = name1;
-            SecondName = name2;
+            this.FirstName = FirstName;
+            this.SecondName = SecondName;
             Messege = true;
             Type = TypeUser.User;
         }
-        public Account(decimal bal, string name1, string name2, string pass)
+        public Account(decimal balance, string FirstName, string SecondName, string pass) : this(FirstName, SecondName, pass)
         {
-            ID = GenId();
-            Balance = bal;
-            Password = pass;
-            FirstName = name1;
-            SecondName = name2;
-            Messege = true;
-            Type = TypeUser.User;
+            Balance = balance;
         }
-        public Account(TypeUser type, string name1, string name2, string pass)
+        public Account(TypeUser type, string FirstName, string SecondName, string pass) : this(FirstName, SecondName, pass)
         {
-            ID = GenId();
             Type = type;
             Password = pass;
-            FirstName = name1;
-            SecondName = name2;
-            Messege = true;
         }
-        public Account(decimal bal, TypeUser type, string name1, string name2, string pass)
+        public Account(decimal balance, TypeUser type, string FirstName, string SecondName, string pass) : this(balance, FirstName, SecondName, pass)
         {
-            ID = GenId();
-            Balance = bal;
             Type = type;
-            Password = pass;
-            FirstName = name1;
-            SecondName = name2;
-            Messege = true;
         }
+
 
         /// <summary>
         /// генерация id
@@ -89,13 +75,20 @@ namespace Lesson_3
         {
             return pass == Password;
         }
+
+
         /// <summary>
         /// положить деньги на счет
         /// </summary>
         /// <param name="put">сумма</param>
-        public void PutMoney(decimal put)
+        public bool PutMoney(decimal put)
         {
-            Balance += put;
+            if (put > 0)
+            {
+                Balance += put;
+                return true;
+            }
+            return false;
         }
         /// <summary>
         /// снять с счета
@@ -103,7 +96,7 @@ namespace Lesson_3
         /// <param name="getm">сумма</param>
         public bool GetMoney(decimal getm)
         {
-            if (getm <= Balance)
+            if (getm <= Balance && getm > 0)
             {
                 Balance -= getm;
                 return true;
@@ -140,6 +133,8 @@ namespace Lesson_3
             }
             return false;
         }
+        
+
         /// <summary>
         /// переворот строки
         /// </summary>
@@ -148,6 +143,36 @@ namespace Lesson_3
         public string ReversString(string mess)
         {
             return new string(mess.Reverse().ToArray());
+        }
+
+        public override bool Equals(object obj)
+        {
+            Account accE;
+            try
+            {
+                accE = (Account)obj;
+            }
+            catch
+            {
+                return false;
+            }
+            return this.ID == accE.ID;
+        }
+        public static bool operator ==(Account acc1, Account acc2)
+        {
+            return Equals(acc1, acc2);
+        }
+        public static bool operator !=(Account acc1, Account acc2)
+        {
+            return !Equals(acc1, acc2);
+        }
+        public override string ToString()
+        {
+            return ($"ID: {ID}  FirstName: {FirstName}  SecondName: {SecondName}");
+        }
+        public override int GetHashCode()
+        {
+            return ID + FirstName.Length + SecondName.Length;
         }
     }
 }
