@@ -191,7 +191,7 @@ namespace Lesson_5
         }
         public override string ToString()
         {
-            return _m + "/" + _n;
+            return $"{_m}/{_n}";
         }
 
         public static implicit operator int(Ratio r)
