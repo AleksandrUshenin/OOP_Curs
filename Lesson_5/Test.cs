@@ -20,7 +20,7 @@ namespace Lesson_5
         {
             foreach (var data in Result)
             {
-                if (data == false)
+                if (!data)
                 {
                     return "Test Failed!";
                 }
