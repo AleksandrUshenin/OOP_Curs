@@ -14,6 +14,19 @@ namespace Lesson_3
             RunTest();
             Run3();
 
+            Account acc1 = new Account(1000, TypeUser.User, "user1", "user1", "user1");
+            Account acc2 = new Account(2000, TypeUser.User, "user2", "user2", "user2");
+
+            bool res = acc1 == acc2;
+            bool res1 = acc1 == acc1;
+            bool res2 = acc1 != acc2;
+            bool res3 = acc1 != acc1;
+
+            string status = acc1.ToString();
+
+            int hesh1 = acc1.GetHashCode();
+            int hesh2 = acc2.GetHashCode();
+
             Console.ReadKey();
         }
         static void RunTest()
