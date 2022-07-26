@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Lesson_6.Interface;
+
 namespace Lesson_6
 {
-    internal class Rectangle : Point
+    internal class Rectangle : Point, IFigureObject
     {
         private double _length;
         private double _width;

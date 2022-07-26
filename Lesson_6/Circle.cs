@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Lesson_6.Interface;
+
 namespace Lesson_6
 {
-    internal class Circle : Point
+    internal class Circle : Point, IFigureObject
     {
         private double _r;
         private readonly double Pi = 3.14;
