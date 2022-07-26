@@ -132,11 +132,7 @@ namespace Lesson_5
         }
         public static bool operator !=(Ratio r1, Ratio r2)
         {
-            if (r2._m == 0 || r2._n == 0) return false;
-            Ratio R1;
-            Ratio R2;
-            CarrentDenominator(r1, r2, out R1, out R2);
-            return (R1._m != R2._m || R1._n != R2._n);
+            return !(r1 == r2);
         }
         public static bool operator >(Ratio r1, Ratio r2)
         {
